@@ -8,7 +8,6 @@ const CountriesInfo = ({country,sentLoad,darkTheme}) => {
 const [ borders, setBorders ]  = useState([]);
 const [ raw, setRaw ]  = useState([]);
 const [ countries, setCountries ] = useState([...country])
-
 const navigate = useNavigate()
 
 useEffect(() =>{

@@ -29,9 +29,6 @@ function App() {
   if (response.status >= 200 && response.status <= 299) {
     const jsonResponse = await response.json();
     await setCountries(jsonResponse)
- 
-   
-
   } else {
      console.log(response.status, response.statusText);
   }
@@ -59,7 +56,6 @@ const res = await fetch(`https://restcountries.com/v3.1/name/${getName}`)
      
     }
    }
-
    const filterRegions = async (getRegion) => {
     if(getRegion === "All"){
       fetchAll()
