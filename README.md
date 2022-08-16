@@ -35,11 +35,10 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
-- JavaScript
 - Tailwindcss (https://tailwindcss.com/) - CSS framework
 - React (https://reactjs.org/)
+- React Router
+- Rest Countries Api https://restcountries.com/
+- Netlify
+
+
