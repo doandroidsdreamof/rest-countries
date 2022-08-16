@@ -22,14 +22,14 @@ Users should be able to:
 
 
 
-![screenshots](./screenshot.jpg)
+![](screenshot.jpg)
 
 
 
 
 
 
-![screenshots](./screenshot-white.jpg)
+![](screenshot-white.jpg)
 
 
 
