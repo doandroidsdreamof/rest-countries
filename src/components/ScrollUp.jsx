@@ -6,7 +6,7 @@ import { useEffect } from "react";
     useEffect(() =>{
         const upButton = document.querySelector('.scroll-up');
         window.addEventListener('scroll', () => {   
-        window.scrollY > 90 ?  upButton.style.display = "block" : upButton.style.display = "none"
+        window.scrollY > 100 ?  upButton.style.display = "block" : upButton.style.display = "none"
      
           });
 
