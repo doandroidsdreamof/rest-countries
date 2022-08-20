@@ -7,7 +7,7 @@ import { useEffect } from "react";
         const upButton = document.querySelector('.scroll-up');
         const upSvg = document.querySelector('.up-svg');
         window.addEventListener('scroll', () => {   
-        window.scrollY > 100 ?  upButton.style.display = "block" &&  upSvg.style.display = "block" : upButton.style.display = "none" &&  upSvg.style.display = "block"
+        window.scrollY > 100 ?  upButton.style.display = "block" &&  upSvg.style.display = "block" : upButton.style.display = "none" &&  upSvg.style.display = "none"
      
           });
 
