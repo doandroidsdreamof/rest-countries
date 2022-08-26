@@ -24,9 +24,9 @@
 
 ### Built with
 
-- Tailwindcss (https://tailwindcss.com/) - CSS framework
+- Tailwind CSS (https://tailwindcss.com/) - CSS framework
 - React (https://reactjs.org/)
-- React Router
+- React Router DOM
 - Rest Countries Api https://restcountries.com/
 - Netlify
 
