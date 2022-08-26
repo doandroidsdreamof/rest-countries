@@ -134,8 +134,8 @@ const res = await fetch(`https://restcountries.com/v3.1/name/${getName}`)
            {countries.slice(0,`${show}`).map((country,index) =>{
              return (
               <main>
-             <div key={country.name} onClick={() => { singleCountries(country,index); setHideInput(!hideInput)}} className={!load ? 'animate-pulse   translate-y-14 shadow-2xl  space-y-4 md:w-eighty space-x-2 rounded-md md:mr-auto md:ml-auto  cursor-pointer relative left-0 h-nintyFive hover:opacity-75 hover:shadow-2xl  bg-lm-elements-white object-cover  flex flex-col items-center ' : `${dark ? 'bg-dark-blue' : 'bg-lmelements-white'} translate-y-14 shadow-2xl space-y-4 md:w-eighty space-x-2 rounded-md md:mr-auto md:ml-auto  cursor-pointer relative left-0 h-nintyFive hover:opacity-75 hover:shadow-2xl   object-cover  flex flex-col items-center `} >
-             <img className={!load ? 'opacity-0' : "h-1/2 object-cover w-full rounded-t-md"} 
+             <div key={country.name} onClick={() => { singleCountries(country,index); setHideInput(!hideInput)}} className={!load ? 'animate-pulse   translate-y-14 shadow-2xl  space-y-4 md:w-eighty space-x-2 rounded-md md:mr-auto md:ml-auto  cursor-pointer relative left-0 h-nintyFive hover:opacity-75 hover:shadow-2xl  bg-lm-elements-white   flex flex-col items-center ' : `${dark ? 'bg-dark-blue' : 'bg-lmelements-white'} translate-y-14 shadow-2xl space-y-4 md:w-eighty space-x-2 rounded-md md:mr-auto md:ml-auto  cursor-pointer relative left-0 h-nintyFive hover:opacity-75 hover:shadow-2xl   object-cover  flex flex-col items-center `} >
+             <img className={!load ? 'opacity-0' : "object-cover max-h-36 w-full rounded-t-md"} 
                src={country.flags.png} 
                alt={country.cca3} 
                />
@@ -155,7 +155,7 @@ const res = await fetch(`https://restcountries.com/v3.1/name/${getName}`)
            }) } 
            </div>
            {/* default card number of page and show all */}
-           <div onClick={() => setShowMore(show === 12 ? 250 : 12)} className={!load ? "hidden " : `${dark ? 'bg-very-dark-blue' : ' bg-lmbg-very-light-gray'}`}>
+           <div onClick={() => setShowMore(show === 12 ? 250 : 12)} className={!load ? "hidden " : `${dark ? 'bg-very-dark-blue pt-10 pb-1' : ' bg-lmbg-very-light-gray  pt-10 pb-1'}`}>
            <button className={`show-more-button relative   inline-flex -translate-x-1/2 left-1/2 items-center justify-center p-1  mb-2 mt-16 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white`}>
            <span className={`${dark ? 'bg-dark-blue text-white' : 'bg-white text-black'} show-more-span relative font-NunitoSans px-10 py-2.5 transition-all ease-in duration-75  rounded-md group-hover:bg-opacity-0`}>
                {show === 12 ? 'Show All' :  "Show Less"}
@@ -178,5 +178,3 @@ const res = await fetch(`https://restcountries.com/v3.1/name/${getName}`)
 }
 
 export default App;
-
-   
