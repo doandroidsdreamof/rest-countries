@@ -72,7 +72,7 @@ convertBorders(borders)
           alt={get.name.common || get.name.official} 
           />
           <div className={`${darkTheme ? 'bg-very-dark-blue' : 'bg-lmbg-very-light-gray' } pt-10  pl-16 space-y-4  md:m-auto  `}>
-          <h1  className={` md:text-4xl text-2xl  font-sixHundred`}>{get.name.common !== undefined ? get.name.common : get.name.official  }</h1>
+          <h1  className={`${darkTheme ? md:text-4xl text-2xl  font-sixHundred`}>{get.name.common !== undefined ? get.name.common : get.name.official  }</h1>
           <p   className={`${darkTheme ? 'text-white' : 'text-black' } t text-base `}><strong>Native Name: </strong> { get.cca3 === "ATA" || "BVT" ? get.name.common : get.name.nativeName[Object.keys(get.name.nativeName)[0]].common !== undefined ? get.name.nativeName[Object.keys(get.name.nativeName)[0]].common : "None"  }</p>
           <p   className={`${darkTheme ? 'text-white' : 'text-black' } text-base `}><strong>Population: </strong>{new Intl.NumberFormat().format(get.population)}</p>
           <p   className={`${darkTheme ? 'text-white' : 'text-black' } text-base `}><strong>Region: </strong>{get.region}</p>
