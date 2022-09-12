@@ -129,7 +129,7 @@ const res = await fetch(`https://restcountries.com/v3.1/name/${getName}`)
     <Route  path="/"
            element={
             <>
-           <div className={`${dark ? 'bg-very-dark-blue' : 'bg-lmbg-very-light-gray'}  grid md:grid-cols-3 lg:grid-cols-4 gap-2  justify-center gap-x-0 px-16 md:px-auto  lg:px-auto object-cover `}>
+           <div className={`${dark ? 'bg-very-dark-blue' : 'bg-lmbhttps://github.com/doandroidsdreamof/rest-countries-api.gitg-very-light-gray'}  grid md:grid-cols-3 lg:grid-cols-4 gap-2  justify-center gap-x-0 px-16 md:px-auto  lg:px-auto object-cover `}>
            {/* slice method for function of show all. */}
            {countries.slice(0,`${show}`).map((country,index) =>{
              return (
