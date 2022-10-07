@@ -18,11 +18,11 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-     
+
   }, [load]);
 
 
-  
+
 
   return (
 
@@ -47,8 +47,8 @@ function App() {
         element={
           <Home countries={countries} load={load} />
         }
-        
-        />
+
+      />
 
     </Routes>
 

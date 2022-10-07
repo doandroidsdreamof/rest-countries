@@ -4,7 +4,13 @@ import DarkToggle from "./DarkToggle.jsx";
 
 const Navbar = (props) => {
   const [dark, setDark] = useState();
+  const { theme, setTheme } = React.useContext(ThemeContext);
 
+  const darkFunction = () => {
+    setDark(!dark);
+    props.darkFunction(!dark);
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   return (
     <div className="navbar shadow-md  px-3 md:px-10 border-b bg-lmbg-very-light-gray  border-gray-300 lg:px-20">
@@ -25,14 +31,3 @@ const Navbar = (props) => {
 export default Navbar;
 
 
-/*
-  const { theme, setTheme } = React.useContext(ThemeContext);
-
-  const darkFunction = () => {
-    setDark(!dark);
-    props.darkFunction(!dark);
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
-
-
-  */

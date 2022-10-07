@@ -18,8 +18,8 @@ const Home = ({ countries, load }) => {
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
 
   useEffect(() => {
-    setCurrentCards(countries.slice(indexOfFirstCard, indexOfLastCard));
-  }, [countries, currentPage, cardsPerPage]);
+    setCurrentCards(countries);
+  }, [countries]);
 
   const handlePageChange = (page, value) => {
     let getValue = value;
@@ -29,7 +29,7 @@ const Home = ({ countries, load }) => {
   };
   const handleSelect = (e) => {
     if (e === "All") {
-      setCurrentCards(countries.slice(indexOfFirstCard, indexOfLastCard));
+      setCurrentCards(countries);
       return;
     } else {
       let selectFilter = countries.filter((el, i) => el.region.includes(e));
@@ -37,30 +37,17 @@ const Home = ({ countries, load }) => {
     }
   };
 
-  const searchCountries = async (e) => {
-    let getInput = e;
-    if (getInput === 0) {
-      return;
-    }
-    if (getInput.length > 2) {
-      const caseInsensitive = await getInput
-        .split(" ")
-        .map((s) => s.charAt(0).toUpperCase() + s.substring(1))
-        .join(" ");
-      const filterCountries = await countries.find((items) => items.name.common.match(caseInsensitive));
-      const res = await fetch(`https://restcountries.com/v3.1/name/${getInput}`);
-      const data = await res.json();
-      if(data.status !== 404)
-      console.log(data.name)
+  const searchCountries =   (e) => {
+    let getInput =   e;
+    let findItems =   countries.filter((el,i) =>  el.name.official.toLowerCase().includes(getInput.toLowerCase()))
+    if(findItems.length > 0){
+    let parseArr = Array(cardsPerPage).fill(findItems);
+    setCurrentCards(parseArr[0])
 
-   
-    
-
-         
-      
-
-    }
+    console.log(findItems)
+   }
   };
+
 
 
 
@@ -70,7 +57,7 @@ const Home = ({ countries, load }) => {
     <div className={` bg-lmbg-very-light-gray  gap-y-8 flex flex-col  `}>
       <NavBar />
       <InputsWrapper select={<SelectInput onChange={handleSelect} />} search={<SearchInput search={searchCountries} />} />
-      <CardGrid skeleton={<Skeleton load={load} key={currentCards.length} n={currentCards.length} />} cards={<Cards key={currentCards.length} currentCards={currentCards} load={load} />} />
+      <CardGrid skeleton={<Skeleton load={load} key={currentCards.length} n={currentCards.length} />} cards={<Cards currentCards={currentCards.slice(indexOfFirstCard, indexOfLastCard)} load={load} />} />
 
       <ScrollUp load={load} />
       <div className={load ? "block" : "hidden"}>
@@ -84,18 +71,3 @@ const Home = ({ countries, load }) => {
 
 export default Home;
 
-/*
-
-    let filterArr = countries.find((el, i) => el.name.official.toLowerCase().includes(getInput.toLowerCase()));
-      
-
-
-  currentCards.shift(i);
-  currentCards.unshift(filterArr);
-
-
-  setCurrentCards(currentCards.slice(indexOfFirstCard, indexOfLastCard));
-  console.log(currentCards)
-
-
-  */
