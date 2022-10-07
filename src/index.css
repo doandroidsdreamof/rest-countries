@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  background: none !important;
+}
+.MuiPagination-root  ul li button{
+      color: black !important;
+     border: 1px solid gray;
+  }
+  .MuiPagination-root  div{
+    color: black !important;
+  
+
+}
