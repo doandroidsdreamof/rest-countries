@@ -38,7 +38,6 @@ const DetailsBorders = ({ countryBorders, n, getName, all }) => {
 
     if (e.button === 1) {
       setDiasable(false);
-      console.log(e.target);
     } else {
       setDiasable(true);
     }

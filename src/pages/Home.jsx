@@ -16,7 +16,7 @@ const Home = ({ countries, load }) => {
   const [currentCards, setCurrentCards] = useState([]);
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
-
+  
   useEffect(() => {
     setCurrentCards(countries);
     const hidePagination = document.querySelector('.hide-on-search');

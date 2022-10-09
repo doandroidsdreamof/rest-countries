@@ -5,15 +5,6 @@ const DetailsContentFirst = ({nameFirst,nameSecond,nameThird,population,region,s
 
 const [parseNative,setParseNative] = useState([]);
 
-/*
-console.log('second content nameFirst',nameFirst)
-console.log('second content nameSecond',nameSecond)
-console.log(' second content nameThird',nameThird)
-console.log(' second content population',population)
-console.log(' second content region',region)
-console.log(' second content subRegion',subRegion)
-console.log(' second content capital',capital)
-*/
 
   useEffect(() =>{
     parseNativeName(nameThird)
