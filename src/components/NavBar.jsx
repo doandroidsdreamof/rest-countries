@@ -10,8 +10,6 @@ const Navbar = () => {
 
   function handleDark() {
     setTheme(theme === "dark" ? "light" : "dark");
-
-   
   }
 
   return (
