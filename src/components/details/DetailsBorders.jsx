@@ -14,22 +14,21 @@ const DetailsBorders = ({ countryBorders, n, getName, all }) => {
     convertBorders(countryBorders);
   }, [countryBorders]);
 
-   function convertBorders(data) {
-    let arr =  [data];
-    let parseBorder =  [];
-    let converted =  [];
+  function convertBorders(data) {
+    let arr = [data];
+    let parseBorder = [];
+    let converted = [];
     for (let i = 0; i < arr.length; i++) {
       parseBorder.push(arr[i].borders);
       for (let j = 0; j < parseBorder[0].length; j++) {
-        converted.push(countries.getName(`${parseBorder[0][j]}`, "en", {select: "alias"}));
+        converted.push(countries.getName(`${parseBorder[0][j]}`, "en", { select: "alias" }));
       }
     }
-    let output = converted.filter(function( element ) {
+    let output = converted.filter(function(element) {
       return element !== undefined;
-   })
+    });
     setBorders(output);
   }
-
 
   const handleCode = async (e) => {
     const getName = await e.target.value;
