@@ -10,13 +10,13 @@
 
 html{
   background: none !important;
-}
-.MuiPagination-root  ul li button{
-      color: black !important;
-     border: 1px solid gray;
-  }
-  .MuiPagination-root  div{
-    color: black !important;
-  
 
 }
+.MuiPagination-root  ul li button{
+     border: 1px solid gray;
+     color: blueviolet !important;
+
+  }
+  .MuiPagination-root  ul li{
+    color:black;
+  }

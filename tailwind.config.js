@@ -19,10 +19,10 @@ module.exports = {
         'dark-blue': 'hsl(209, 23%, 22%)',
         'very-dark-blue': 'hsl(207, 26%, 17%)',
         'text-white': 'hsl(0, 0%, 100%)',
-        'lmtext-very-dark-blue': 'hsl(200, 15%, 8%)',
-        'lminput-dark-gray': 'hsl(0, 0%, 52%)',
-        'lmbg-very-light-gray': 'hsl(0, 0%, 98%)',
-        'lmelements-white': 'hsl(0, 0%, 100%)',  
+        'lm-text': 'hsl(200, 15%, 8%)',
+        'lm-input-gray': 'hsl(0, 0%, 52%)',
+        'lm-bg-gray': 'hsl(0, 0%, 98%)',
+        'lm-white': 'hsl(0, 0%, 100%)',  
 
       },
  

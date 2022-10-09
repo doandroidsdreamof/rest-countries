@@ -3,8 +3,8 @@ import React from "react";
 const DetailLayout = (props) => {
   
   return (
-    <section className=" h-screen bg-lmbg-very-light-gray  ">
-      <div className=" mx-auto flex md:flex-row  bg-lmbg-very-light-gray   justify flex-col items-center  w-screen ">
+    <section className="  bg-lm-bg-gray dark:bg-very-dark-blue w-screen h-screen">
+      <div className=" mx-auto flex md:flex-row bg-lm-bg-gray dark:bg-very-dark-blue    justify flex-col items-center  w-screen ">
         <div className="lg:max-w-lg  lg:w-full flex flex-col md:ml-auto  mx-auto  md:w-1/2 w-5/6 mb-10 md:mb-0">
           <div className="pb-5 mt-8 w-full top-0   ">{props.DetailBackButton}</div>
           {props.CountriesDetailFlag}

@@ -19,6 +19,9 @@ const Home = ({ countries, load }) => {
 
   useEffect(() => {
     setCurrentCards(countries);
+    const hidePagination = document.querySelector('.hide-on-search');
+    hidePagination.style.display = 'block';
+
   }, [countries]);
 
   const handlePageChange = (page, value) => {
@@ -39,12 +42,16 @@ const Home = ({ countries, load }) => {
 
   const searchCountries =   (e) => {
     let getInput =   e;
+    const hidePagination = document.querySelector('.hide-on-search');
+    hidePagination.style.display = 'none';
     let findItems =   countries.filter((el,i) =>  el.name.official.toLowerCase().includes(getInput.toLowerCase()))
     if(findItems.length > 0){
     let parseArr = Array(cardsPerPage).fill(findItems);
     setCurrentCards(parseArr[0])
+   }if(getInput.length === 0){
+    hidePagination.style.display = 'block';
 
-    console.log(findItems)
+
    }
   };
 
@@ -54,7 +61,7 @@ const Home = ({ countries, load }) => {
 
 
   return (
-    <div className={` bg-lmbg-very-light-gray  gap-y-8 flex flex-col  `}>
+    <div className={` bg-lm-bg-gray dark:bg-very-dark-blue  gap-y-8 flex flex-col  `}>
       <NavBar />
       <InputsWrapper select={<SelectInput onChange={handleSelect} />} search={<SearchInput search={searchCountries} />} />
       <CardGrid skeleton={<Skeleton load={load} key={currentCards.length} n={currentCards.length} />} cards={<Cards currentCards={currentCards.slice(indexOfFirstCard, indexOfLastCard)} load={load} />} />

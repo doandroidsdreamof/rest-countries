@@ -9,19 +9,15 @@ const DetailsContentSecond = ({ currencies, domainTop, language, code }) => {
 
   const mapItems = (language, currencies) => {
     if (language && currencies === undefined) {
-      console.log("language && currencies undefined");
       return;
     }
     if (language === undefined) {
-      console.log("langauge undefined");
       for(let x in currencies){
         setParseCurrencies(currencies[x])
-
       }
       return
     }
     if (currencies === undefined) {
-      console.log("currencies undefined");
       for(let x in language){
         setParseLanguage(language[x])
 
@@ -30,7 +26,6 @@ const DetailsContentSecond = ({ currencies, domainTop, language, code }) => {
     }
 
     if (language && currencies !== undefined) {
-      console.log("language && currencies ok");
       for(let x in currencies){
         setParseCurrencies(currencies[x])
 
@@ -43,24 +38,20 @@ const DetailsContentSecond = ({ currencies, domainTop, language, code }) => {
     }
   };
 
-/*
-  console.log("lan", parseLanguage);
-  console.log("cur", parseCurrencies);
 
-*/
 
 
   return <>
-        <p className={`  text-black text-sm `}>
+        <p className={`dark:text-gray-300 text-gray-800  text-sm  font-NunitoSans`}>
         Top Level Domain:&nbsp;
         {domainTop && domainTop !== undefined ? domainTop : "none"}
       </p>
-      <p className={`   text-black  text-sm `}>
+      <p className={`dark:text-gray-300   text-gray-800  text-sm font-NunitoSans `}>
         Currencies:&nbsp;
         {code !== "ATA" || "BVT"  ? parseCurrencies.name : "none"}
 
       </p>
-      <p className={`  text-black  text-sm flex gap-2 flex-wrap`}>
+      <p className={`dark:text-gray-300 text-gray-800   text-sm flex gap-2 flex-wrap font-NunitoSans`}>
         Languages:
         <span>
         {code !== "ATA" ||  "BVT"   ?  parseLanguage : "none"}

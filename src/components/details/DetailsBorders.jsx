@@ -48,15 +48,15 @@ const DetailsBorders = ({ countryBorders, n, getName, all }) => {
   };
 
   return (
-    <div className={`   md:max-w-sm    text-black text-baseflex flex-wrap `}>
+    <div className={`   md:max-w-sm    text-gray-900 dark:text-gray-100 text-baseflex flex-wrap `}>
       <strong>Border Countries: </strong>
       <br />
 
-      <div className=" gap-1 flex-wrap flex ">
+      <div className=" gap-1 flex-wrap flex mt-4 ">
         {borders && borders.length > 0
           ? borders.map((e, i) => (
               <Link to={`/details/${countries.getAlpha3Code(`${e}`, "en")}`}>
-                <button key={i} value={e ? e : null} className=" text-gray-800 bg-white shadow-md font-NunitoSans  p-1.5 rounded-md duration-200 hover:scale-105 hover:shadow-xl ease-in-out ">
+                <button key={i} value={e ? e : null} className="dark:text-white  dark:bg-dark-blue text-gray-800 bg-white shadow-md font-NunitoSans  p-1.5 rounded-md duration-200 hover:scale-105 hover:shadow-xl ease-in-out ">
                   {e ? e : null}
                 </button>
               </Link>

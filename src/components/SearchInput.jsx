@@ -12,7 +12,7 @@ const SearchInput = (prop) => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
             </svg>
           </div>
-          <input   onChange={(getName) => prop.search(getName.target.value)} type="search" id="default-search" className="border block p-4 pl-10 w-full text-sm   rounded-lg    text-gray-900 bg-white   border-gray-300   focus:ring-blue-500 focus:border-blue-500    dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search a country..." required=""  />
+          <input   onChange={(getName) => prop.search(getName.target.value)} type="search" id="default-search" className="dark:bg-dark-blue dark:text-white border block p-4 pl-10 w-full text-sm   rounded-lg    text-gray-900 bg-white   border-gray-300   focus:ring-blue-500 focus:border-blue-500    dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search a country..." required=""  />
         </div>
   
     </>
