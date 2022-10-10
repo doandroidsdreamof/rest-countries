@@ -8,8 +8,11 @@
   padding: 0;
 }
 
+
+
 html{
   background: none !important;
+
 
 }
 .MuiPagination-root  ul li button{
@@ -19,4 +22,8 @@ html{
   }
   .MuiPagination-root  ul li{
     color:black;
+  }
+
+  main{
+    height: 100vh;
   }

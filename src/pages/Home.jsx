@@ -61,11 +61,11 @@ const Home = ({ countries, load }) => {
 
 
   return (
-    <div className={` bg-lm-bg-gray dark:bg-very-dark-blue  gap-y-8 flex flex-col  `}>
+  <main className="bg-lm-bg-gray dark:bg-very-dark-blue">
+      <div className={` bg-lm-bg-gray dark:bg-very-dark-blue   gap-y-8 flex flex-col  `}>
       <NavBar />
       <InputsWrapper select={<SelectInput onChange={handleSelect} />} search={<SearchInput search={searchCountries} />} />
-      <CardGrid skeleton={<Skeleton load={load} key={currentCards.length} n={currentCards.length} />} cards={<Cards currentCards={currentCards.slice(indexOfFirstCard, indexOfLastCard)} load={load} />} />
-
+      <CardGrid skeleton={<Skeleton load={load}  n={cardsPerPage} />} cards={<Cards currentCards={currentCards.slice(indexOfFirstCard, indexOfLastCard)} load={load} />}  />
       <ScrollUp load={load} />
       <div className={load ? "block" : "hidden"}>
         <PaginationWrapper>
@@ -73,6 +73,7 @@ const Home = ({ countries, load }) => {
         </PaginationWrapper>
       </div>
     </div>
+  </main>
   );
 };
 

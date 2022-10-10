@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Home from './pages/Home.jsx'
 import DetailPage from './pages/DetailPage.jsx'
+import ErrorPage from './pages/ErrorPage.jsx'
 
 
 
@@ -45,7 +46,7 @@ function App() {
         load={load}
         path='*'
         element={
-          <Home countries={countries} load={load} />
+          <ErrorPage  />
         }
 
       />

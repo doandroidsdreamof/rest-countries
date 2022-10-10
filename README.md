@@ -11,14 +11,11 @@
 
 
 
-![](./screenshots/screenshot.jpg)
+![](./screenshots/countries.jpg)
 
 
 
 
-
-
-![](./screenshots/screenshot-white.jpg)
 
 
 
@@ -29,6 +26,10 @@
 - React Router DOM
 - Rest Countries Api https://restcountries.com/
 - Netlify
+- daisyUI (https://daisyui.com/)
+- MaterialUI (https://mui.com/)
+- React-lazy-load-image-component (https://www.npmjs.com/package/react-lazy-load-image-component)
+
 
 ### Useful resources
 
