@@ -1,5 +1,4 @@
 import React from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useEffect, useState } from "react";
 
 const Skeleton = ({ load,n }) => {
