@@ -6,7 +6,7 @@ const DetailsContentFirst = ({ nameFirst, nameSecond, nameThird, population, reg
 
   useEffect(() => {
     parseNativeName(nameThird);
-  }, [nameThird]);
+  }, [nameThird,nameFirst,nameSecond,subRegion,subRegion,capital]);
 
   function parseNativeName(native) {
     let parse = [];

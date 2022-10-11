@@ -5,7 +5,7 @@ const DetailsContentSecond = ({ currencies, domainTop, language, code }) => {
   const [parseCurrencies, setParseCurrencies] = useState([]); 
   useEffect(() => {
     mapItems(language, currencies);
-  }, []);
+  }, [language,currencies]);
 
   const mapItems = (language, currencies) => {
     if (language && currencies === undefined) {
