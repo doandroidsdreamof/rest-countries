@@ -7,7 +7,7 @@ const DarkToggle = ({darkMode}) => {
 
   return (
     <>
-      <label className="swap swap-rotate text-gray-600 mr-2 dark:text-white">
+      <label className="swap swap-rotate text-gray-600 mr-5 dark:text-white">
         <input onChange={darkMode} type="checkbox" />
 
         <svg className="swap-on fill-current w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

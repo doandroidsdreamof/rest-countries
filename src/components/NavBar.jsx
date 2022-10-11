@@ -20,7 +20,7 @@ const Navbar = () => {
         </p>
       </div>
       <div className="flex flex-row gap-x-5 ">
-        <h2 className={`dark:text-white  text-black text-xs md:text-base font-NunitoSans  relative text-end `}>{theme === "dark" ? "Dark Mode" : "Light Mode"}</h2>
+        <h2 className={`dark:text-white  text-black text-xs md:text-base font-NunitoSans  relative text-end font-bold md:font-medium `}>{theme === "dark" ? "Dark Mode" : "Light Mode"}</h2>
         <DarkToggle darkMode={handleDark} />
       </div>
     </div>
