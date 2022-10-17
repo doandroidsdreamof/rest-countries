@@ -54,7 +54,9 @@ const Home = ({ countries, load }) => {
     let findItems = countries.filter((el, i) => el.name.official.toLowerCase().includes(getInput.toLowerCase()));
     if (findItems.length > 0) {
       let parseArr = Array(cardsPerPage).fill(findItems);
+      setCurrentPage(1)
       setCurrentCards(parseArr[0]);
+      console.log(cardsPerPage)
     }
     if (getInput.length === 0) {
       hidePagination.style.display = "block";
