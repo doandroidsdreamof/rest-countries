@@ -31,14 +31,24 @@ const Home = ({ countries, load }) => {
     setCurrentPage(currentValue);
   };
   const handleSelect = (e) => {
+    const hidePagination = document.querySelector('.hide-on-search');
     if (e === "All") {
       setCurrentCards(countries);
+      setCurrentPage(1)
+      hidePagination.style.display = 'block';
+      setCardsPerPage(20)
       return;
     } else {
       let selectFilter = countries.filter((el, i) => el.region.includes(e));
-      setCurrentCards(selectFilter.slice(indexOfFirstCard, indexOfLastCard));
+      setCurrentCards(selectFilter);
+      setCurrentPage(1)
+      setCardsPerPage(selectFilter.length)
+      console.log(selectFilter.length)
+      hidePagination.style.display = 'none';
     }
   };
+
+
 
   const searchCountries =   (e) => {
     let getInput =   e;
@@ -61,7 +71,7 @@ const Home = ({ countries, load }) => {
 
 
   return (
-  <main className="bg-lm-bg-gray dark:bg-very-dark-blue">
+  <main className="bg-lm-bg-gray dark:bg-very-dark-blue overflow-x-hidden">
       <div className={` bg-lm-bg-gray dark:bg-very-dark-blue   gap-y-8 flex flex-col  `}>
       <NavBar />
       <InputsWrapper select={<SelectInput onChange={handleSelect} />} search={<SearchInput search={searchCountries} />} />
