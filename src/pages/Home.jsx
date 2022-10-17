@@ -58,6 +58,9 @@ const Home = ({ countries, load }) => {
     }
     if (getInput.length === 0) {
       hidePagination.style.display = "block";
+      setCurrentPage(1);
+      setCardsPerPage(20);
+
     }
   };
 
